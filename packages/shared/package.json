@@ -1,0 +1,32 @@
+{
+  "name": "@system-designs/shared",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "description": "Shared components for system designs demo",
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm --dts --outDir dist",
+    "dev": "tsup src/index.tsx --format esm --dts --outDir dist --watch",
+    "lint": "eslint src src/**/*.{ts,tsx}",
+    "format": "prettier --write src src/**/*.{ts,tsx}",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@system-designs/tsconfig": "workspace:*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "^8.3.5",
+    "typescript": "catalog:",
+    "vite": "^6.0.7"
+  }
+}
